@@ -19,3 +19,12 @@ let calculateResult = () =>{
         alert("Invalid Input!");
     }
 }
+
+
+let calculatePercentage = () =>{
+    try {
+        result.value =eval(result.value) / 100;
+    } catch (error) {
+        alert("Error");
+    }
+}
