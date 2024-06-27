@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    
+    <div class="calculator">
+        <div class="screen">
+            <input type="text"  id="display" placeholder="0" disabled>
+        </div>
+
+        <div class="all-buttons">
+            <!-- erase everything -->
+            <button id="clear" class="input-button"onclick="clearDisplay('C')">C</button>
+            <!-- erase per digit -->
+            <button id="erase" class="input-button" onclick="deleteLastDigit('DL')">DL</button>
+
+            <button class="input-button bodmus" onclick="calculate('%')"">%</button>
+            <button class="input-button bodmus" onclick="calculate('/')">/</button>
+
+            <button  class="input-button" onclick="calculate(7)">7</button>
+            <button  class="input-button" onclick="calculate(8)">8</button>
+            <button class="input-button" onclick="calculate(9)">9</button>
+            <button class="input-button bodmus" onclick="calculate('*')">*</button>
+
+            <button class="input-button" onclick="calculate(4)">4</button>
+            <button class="input-button" onclick="calculate(5)">5</button>
+            <button class="input-button" onclick="calculate(6)">6</button>
+            <button class=" input-button bodmus" onclick="calculate('-')">-</button>
+            <button class="input-button" onclick="calculate(1)">1</button>
+            <button class="input-button" onclick="calculate(2)">2</button>
+            <button class="input-button" onclick="calculate(3)">3</button>
+            <button  class="input-button bodmus" onclick="calculate('+')">+</button>
+
+            <!-- Erase one -->
+           
+            <button class="input-button" onclick="calculate(0)">0</button>
+            <button  class="input-button" onclick="calculate('.')">.</button>
+            <button  id="equal" class="Result"" onclick="calculateResult('=')">=</button>
+          
+        </div>
+    </div>
+
+    <!-- JS LINK -->
+     <script src="script.js"></script>
+</body>
+</html>

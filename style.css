@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", monospace;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #010101;
+    --light-bg-color:#171717;
+    --main-color: #375428;
+    --dark-color: #318607;
+    --light-color: #78ce4f;
+    --red-color: #d63615;
+    --num-color: #eeeeee;
+}
+
+body {
+    height: 100vh;
+    background-color: #f0d0d0;
+}
+
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--bg-color);
+    width: 350px;
+    height: 450px;
+    padding: 30px 25px;
+   transform: translate(-50%, -50%);
+   border-radius: 5px;
+   box-shadow: 0 20px 50px rgba(3, 6, 16, 0.4)
+}
+
+.screen {
+    width: 100%;
+    border-bottom: 2px solid var(--light-bg-color);
+    box-shadow: inset 3px 3px 13px #333,
+        3px 3px 13px rgb(51, 51, 51, .16);
+        border-radius: 8px;
+}
+
+.screen input{
+    width: 100%;
+    padding: 15px 10px;
+    text-align: right;
+    border: none;
+    color: var(--num-color);
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.screen input::placeholder{
+    color:#9490ac ;
+}
+
+.all-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.all-buttons .input-button{
+    background-color: var(--light-bg-color);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    color: var(--num-color);
+    transition: all 0.3s ease-in-out;
+}
+.all-buttons :hover{
+    transform: scale(1.1);
+    border: 1px solid #9490ac;
+}
+
+.all-buttons .bodmus:hover{
+    transform: scale(1.1);
+    border: 1px solid var(--dark-color);
+}
+
+.all-buttons #clear:hover,.all-buttons #erase:hover{
+    transform: scale(1.1);
+    border: 1px solid var(--red-color);
+}
+
+.all-buttons .bodmus{
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.all-buttons #clear,.all-buttons #erase{
+    color: var(--red-color);
+}
+
+.Result{
+    grid-column: span 2;
+    width: 80%;
+    font-size: 1.7rem;
+    background-color: var(--light-bg-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--num-color);
+}
